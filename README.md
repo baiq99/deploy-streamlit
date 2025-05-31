@@ -20,34 +20,81 @@ Beberapa pertanyaan utama yang ingin dijawab melalui proyek ini antara lain:
 * **Visualisasi & Pelaporan:** Mengembangkan dashboard interaktif untuk memantau dan menganalisis indikator dropout.
 * **Rekomendasi Tindakan:** Memberikan saran intervensi yang berbasis data untuk menekan angka dropout.
 
-### Persiapan Proyek
+---
 
-Sumber data berasal dari dataset internal Jaya Jaya Institut. Proses setup dilakukan melalui:
+## Persiapan
 
-* Pembuatan lingkungan kerja menggunakan conda
-* Instalasi dependensi
-* Setup database dan Metabase untuk analisis lanjutan
-* Pengiriman dataset ke database melalui SQLAlchemy
+Berikut adalah versi terbaru bagian **Persiapan**, khususnya bagian **Sumber Data**, yang telah dilengkapi dengan tautan dan deskripsi dataset sesuai permintaan:
 
-## Dashboard Bisnis
+---
 
-Dashboard yang dikembangkan dalam proyek ini memberikan wawasan menyeluruh terkait faktor-faktor yang mempengaruhi status siswa (dropout, enrolled, graduated). Dengan menggunakan dashboard ini, institusi dapat:
+## Persiapan
 
-1. **Memantau Tren Dropout Secara Real-Time:** Mengidentifikasi lonjakan angka dropout dan segera mengambil tindakan.
-2. **Menganalisis Penyebab Dropout:** Melihat hubungan antara status siswa dan berbagai faktor akademik maupun sosial-ekonomi.
+### Sumber Data
 
-🔗 **Lihat Dashboard di Looker Studio:**
-[https://lookerstudio.google.com/reporting/aee31d18-8d2e-4986-88ee-521dec85993b](https://lookerstudio.google.com/reporting/aee31d18-8d2e-4986-88ee-521dec85993b)
+Dataset yang digunakan dalam proyek ini merupakan kumpulan data dari institusi pendidikan tinggi, yang mencakup informasi mahasiswa dari berbagai jurusan sarjana seperti agronomi, desain, pendidikan, keperawatan, jurnalisme, manajemen, layanan sosial, dan teknologi.
 
-## Pengoperasian Sistem Machine Learning
+Dataset ini mencakup:
 
-Prototipe sistem machine learning telah dikembangkan untuk memprediksi status siswa berdasarkan data yang tersedia. Untuk menjalankannya secara lokal:
+* Informasi saat pendaftaran mahasiswa (jalur akademik, demografi, dan faktor sosial-ekonomi)
+* Kinerja akademik mahasiswa di akhir semester pertama dan kedua
+
+Tujuan dari dataset ini adalah untuk membangun model klasifikasi guna memprediksi potensi dropout mahasiswa dan kesuksesan akademiknya.
+
+📄 **Nama Dataset:** Students' Performance
+🔗 **Link Dataset:** [https://github.com/dicodingacademy/dicoding\_dataset/tree/main/students\_performance](https://github.com/dicodingacademy/dicoding_dataset/tree/main/students_performance)
+
+---
+
+### Setup Environment
+
+Berikut tahapan setup environment untuk menjalankan proyek ini.
+
+#### Setup Environment - Anaconda
+
+```bash
+conda create --name dropout-predictor python=3.9
+conda activate dropout-predictor
+pip install -r requirements.txt
+````
+
+#### Setup Environment - Shell/Terminal
+
+```bash
+pip install pipenv
+pipenv install
+pipenv shell
+pip install -r requirements.txt
+```
+
+---
+
+## Menjalankan Sistem Machine Learning
+
+Sistem prediksi dikembangkan menggunakan algoritma Random Forest dan ditampilkan dalam bentuk aplikasi Streamlit.
+
+### Cara Menjalankan Secara Lokal
 
 ```bash
 streamlit run app.py
 ```
 
-Atau gunakan versi daring yang telah disiapkan pada platform streamlit community.
+### Link Deployment
+
+🚀 Sistem prediksi juga telah dideploy secara online dan dapat diakses melalui tautan berikut:
+
+🔗 [https://deploy-app.streamlit.app/](https://deploy-app.streamlit.app/)
+
+---
+
+## Dashboard Bisnis
+
+Dashboard yang dikembangkan memberikan wawasan menyeluruh terhadap status mahasiswa (Dropout, Enrolled, Graduate). Dashboard ini membantu pengambilan keputusan berdasarkan tren dan faktor risiko yang teridentifikasi.
+
+🔗 **Lihat Dashboard Looker Studio:**
+[https://lookerstudio.google.com/reporting/aee31d18-8d2e-4986-88ee-521dec85993b](https://lookerstudio.google.com/reporting/aee31d18-8d2e-4986-88ee-521dec85993b)
+
+---
 
 ## Kesimpulan
 
@@ -62,12 +109,17 @@ Proyek ini menjawab berbagai tantangan yang dihadapi oleh Jaya Jaya Institut dal
 3. **Strategi Meningkatkan Retensi**
    Institusi dapat meningkatkan tingkat kelulusan dengan menyediakan dukungan akademik yang lebih baik, menyesuaikan kurikulum agar lebih fleksibel, dan memperluas akses beasiswa bagi siswa yang membutuhkan.
 
-### Rekomendasi Tindak Lanjut
-
-1. **Implementasi Sistem Pemantauan Berbasis Data:** Gunakan model prediksi untuk pemantauan rutin terhadap risiko dropout.
-2. **Perkuat Program Dukungan Akademik dan Psikologis:** Sediakan layanan bimbingan belajar dan konseling untuk siswa rentan.
-3. **Revisi dan Optimalisasi Kurikulum:** Tinjau ulang kurikulum di program studi dengan tingkat dropout tinggi dan sesuaikan beban belajar siswa.
-
 ---
 
-# deploy-streamlit
+## Rekomendasi Tindak Lanjut
+
+1. **Implementasi Sistem Pemantauan Berbasis Data:**
+   Gunakan model prediksi untuk pemantauan rutin terhadap risiko dropout.
+
+2. **Perkuat Program Dukungan Akademik dan Psikologis:**
+   Sediakan layanan bimbingan belajar dan konseling untuk siswa rentan.
+
+3. **Revisi dan Optimalisasi Kurikulum:**
+   Tinjau ulang kurikulum di program studi dengan tingkat dropout tinggi dan sesuaikan beban belajar siswa.
+
+---
