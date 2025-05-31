@@ -94,6 +94,8 @@ Dashboard yang dikembangkan memberikan wawasan menyeluruh terhadap status mahasi
 🔗 **Lihat Dashboard Looker Studio:**
 [https://lookerstudio.google.com/reporting/aee31d18-8d2e-4986-88ee-521dec85993b](https://lookerstudio.google.com/reporting/aee31d18-8d2e-4986-88ee-521dec85993b)
 
+![syfa_oktapiani02-dashboard](https://github.com/user-attachments/assets/83420d40-65cb-4cdc-87f8-056451eab1b7)
+
 ---
 
 ## Kesimpulan
